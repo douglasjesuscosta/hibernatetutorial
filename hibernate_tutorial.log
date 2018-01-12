@@ -1,0 +1,2589 @@
+[20:55:23] Hello, World!
+[20:58:51] Hello, World!
+[00:44:22] Hello, World!
+[00:44:22] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:44:24] 
+    drop table if exists hero cascade
+[00:44:24] 
+    drop sequence hibernate_sequence
+[00:44:24] create sequence hibernate_sequence start 1 increment 1
+[00:44:24] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[00:44:24] 
+    alter table hero 
+        add constraint UK_so1no3wxp67ie8cs0ewtdsrbo unique (name)
+[00:44:24] 
+    select
+        nextval ('hibernate_sequence')
+[00:44:24] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:44:24] binding parameter [1] as [VARCHAR] - [super foo]
+[00:44:24] binding parameter [2] as [BIGINT] - [1]
+[00:53:43] Hello, World!
+[00:53:43] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:53:45] 
+    drop table if exists hero cascade
+[00:53:45] 
+    drop sequence hibernate_sequence
+[00:53:45] create sequence hibernate_sequence start 1 increment 1
+[00:53:45] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[00:53:45] 
+    alter table hero 
+        add constraint UK_so1no3wxp67ie8cs0ewtdsrbo unique (name)
+[00:53:45] 
+    select
+        nextval ('hibernate_sequence')
+[00:53:45] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:53:45] binding parameter [1] as [VARCHAR] - [super foo]
+[00:53:45] binding parameter [2] as [BIGINT] - [1]
+[20:26:29] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:26:47] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:57:34] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:00:52] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:00:53] cannot create sessionFactory
+java.lang.NullPointerException
+	at org.hibernate.boot.MetadataSources.<init>(MetadataSources.java:83)
+	at com.connection.ConnectionBd.getSessionFactory(ConnectionBd.java:42)
+	at DAO.GenericDao.<init>(GenericDao.java:20)
+	at DAO.GenericDao.getGenericDao(GenericDao.java:25)
+	at com.hibernatetutorial.App.main(App.java:23)
+[21:02:54] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:02:55] 
+    alter table hero 
+        drop constraint FKaoro4hsmghv1uexlcbphixk75
+[21:02:55] 
+    drop table if exists hero cascade
+[21:02:55] 
+    drop table if exists Model cascade
+[21:02:55] 
+    create table hero (
+        name varchar(255),
+        id int8 not null,
+        primary key (id)
+    )
+[21:02:55] 
+    create table Model (
+        id  bigserial not null,
+        primary key (id)
+    )
+[21:02:55] 
+    alter table hero 
+        add constraint UK_so1no3wxp67ie8cs0ewtdsrbo unique (name)
+[21:02:55] 
+    alter table hero 
+        add constraint FKaoro4hsmghv1uexlcbphixk75 
+        foreign key (id) 
+        references Model
+[21:02:55] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            Model
+            default 
+        values
+            
+[21:02:55] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:02:55] binding parameter [1] as [VARCHAR] - [Sandy]
+[21:02:55] binding parameter [2] as [BIGINT] - [1]
+[21:04:33] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:04:34] 
+    alter table hero 
+        drop constraint FKaoro4hsmghv1uexlcbphixk75
+[21:04:34] 
+    drop table if exists hero cascade
+[21:04:34] 
+    drop table if exists Model cascade
+[21:04:34] 
+    create table hero (
+        name varchar(255),
+        id int8 not null,
+        primary key (id)
+    )
+[21:04:34] 
+    create table Model (
+        id  bigserial not null,
+        primary key (id)
+    )
+[21:04:34] 
+    alter table hero 
+        add constraint UK_so1no3wxp67ie8cs0ewtdsrbo unique (name)
+[21:04:34] 
+    alter table hero 
+        add constraint FKaoro4hsmghv1uexlcbphixk75 
+        foreign key (id) 
+        references Model
+[21:04:34] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            Model
+            default 
+        values
+            
+[21:04:34] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:04:34] binding parameter [1] as [VARCHAR] - [Sandy]
+[21:04:34] binding parameter [2] as [BIGINT] - [1]
+[21:15:19] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:15:21] cannot create sessionFactory
+org.hibernate.MappingException: Cannot use identity column key generation with <union-subclass> mapping for: com.model.Model
+	at org.hibernate.persister.entity.UnionSubclassEntityPersister.<init>(UnionSubclassEntityPersister.java:82)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:96)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:77)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:344)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at org.hibernate.boot.internal.MetadataImpl.buildSessionFactory(MetadataImpl.java:170)
+	at com.connection.ConnectionBd.getSessionFactory(ConnectionBd.java:49)
+	at DAO.GenericDao.<init>(GenericDao.java:20)
+	at DAO.GenericDao.getGenericDao(GenericDao.java:25)
+	at com.hibernatetutorial.App.main(App.java:23)
+[21:15:51] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:15:52] cannot create sessionFactory
+org.hibernate.MappingException: Cannot use identity column key generation with <union-subclass> mapping for: com.model.Model
+	at org.hibernate.persister.entity.UnionSubclassEntityPersister.<init>(UnionSubclassEntityPersister.java:82)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:96)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:77)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:344)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at org.hibernate.boot.internal.MetadataImpl.buildSessionFactory(MetadataImpl.java:170)
+	at com.connection.ConnectionBd.getSessionFactory(ConnectionBd.java:49)
+	at DAO.GenericDao.<init>(GenericDao.java:20)
+	at DAO.GenericDao.getGenericDao(GenericDao.java:25)
+	at com.hibernatetutorial.App.main(App.java:23)
+[01:23:26] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[01:23:27] cannot create sessionFactory
+org.hibernate.MappingException: Cannot use identity column key generation with <union-subclass> mapping for: com.model.Model
+	at org.hibernate.persister.entity.UnionSubclassEntityPersister.<init>(UnionSubclassEntityPersister.java:82)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:96)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:77)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:344)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at org.hibernate.boot.internal.MetadataImpl.buildSessionFactory(MetadataImpl.java:170)
+	at com.connection.ConnectionBd.getSessionFactory(ConnectionBd.java:49)
+	at DAO.GenericDao.<init>(GenericDao.java:20)
+	at DAO.GenericDao.getGenericDao(GenericDao.java:25)
+	at com.hibernatetutorial.App.main(App.java:23)
+[01:24:01] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[01:24:02] cannot create sessionFactory
+org.hibernate.MappingException: Cannot use identity column key generation with <union-subclass> mapping for: com.model.Model
+	at org.hibernate.persister.entity.UnionSubclassEntityPersister.<init>(UnionSubclassEntityPersister.java:82)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:96)
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:77)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:344)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at org.hibernate.boot.internal.MetadataImpl.buildSessionFactory(MetadataImpl.java:170)
+	at com.connection.ConnectionBd.getSessionFactory(ConnectionBd.java:49)
+	at DAO.GenericDao.<init>(GenericDao.java:20)
+	at DAO.GenericDao.getGenericDao(GenericDao.java:25)
+	at com.hibernatetutorial.App.main(App.java:23)
+[01:25:31] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[01:25:33] 
+    drop table if exists hero cascade
+[01:25:33] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[01:26:49] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[01:26:50] 
+    drop table if exists hero cascade
+[01:26:50] 
+    drop sequence hibernate_sequence
+[01:26:50] create sequence hibernate_sequence start 1 increment 1
+[01:26:50] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[01:26:50] 
+    select
+        nextval ('hibernate_sequence')
+[01:26:50] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[01:26:50] binding parameter [1] as [VARCHAR] - [Sandy]
+[01:26:50] binding parameter [2] as [BIGINT] - [1]
+[01:29:34] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[01:29:35] 
+    drop table if exists hero cascade
+[01:29:35] 
+    drop sequence hibernate_sequence
+[01:29:35] create sequence hibernate_sequence start 1 increment 1
+[01:29:35] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[01:29:35] 
+    select
+        nextval ('hibernate_sequence')
+[01:29:35] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[01:29:35] binding parameter [1] as [VARCHAR] - [Sandy]
+[01:29:35] binding parameter [2] as [BIGINT] - [1]
+[18:45:40] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[18:45:42] 
+    drop table if exists hero cascade
+[18:45:42] 
+    drop sequence hibernate_sequence
+[18:45:42] create sequence hibernate_sequence start 1 increment 1
+[18:45:42] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[18:45:42] 
+    select
+        nextval ('hibernate_sequence')
+[18:45:42] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[18:45:42] binding parameter [1] as [VARCHAR] - [Sandy]
+[18:45:42] binding parameter [2] as [BIGINT] - [1]
+[18:47:31] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[18:48:04] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[18:48:37] 
+    drop table if exists hero cascade
+[18:48:37] 
+    drop sequence hibernate_sequence
+[18:48:37] create sequence hibernate_sequence start 1 increment 1
+[18:48:37] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[18:48:59] 
+    select
+        nextval ('hibernate_sequence')
+[18:49:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[18:49:02] binding parameter [1] as [VARCHAR] - [Sandy]
+[18:49:02] binding parameter [2] as [BIGINT] - [1]
+[18:50:42] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[18:50:44] 
+    drop table if exists hero cascade
+[18:50:44] 
+    drop sequence hibernate_sequence
+[18:50:44] create sequence hibernate_sequence start 1 increment 1
+[18:50:44] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[18:50:44] 
+    select
+        nextval ('hibernate_sequence')
+[18:50:44] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[18:50:44] binding parameter [1] as [VARCHAR] - [Sandy]
+[18:50:44] binding parameter [2] as [BIGINT] - [1]
+[18:52:42] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[18:52:43] 
+    drop table if exists hero cascade
+[18:52:43] 
+    drop sequence hibernate_sequence
+[18:52:43] create sequence hibernate_sequence start 1 increment 1
+[18:52:43] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[18:52:43] 
+    select
+        nextval ('hibernate_sequence')
+[18:52:43] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[18:52:43] binding parameter [1] as [VARCHAR] - [Sandy]
+[18:52:43] binding parameter [2] as [BIGINT] - [1]
+[18:52:43] 
+    drop table if exists hero cascade
+[18:52:43] 
+    drop sequence hibernate_sequence
+[18:52:43] create sequence hibernate_sequence start 1 increment 1
+[18:52:43] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[18:52:43] 
+    select
+        nextval ('hibernate_sequence')
+[18:52:43] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[18:52:43] binding parameter [1] as [VARCHAR] - [Musa]
+[18:52:43] binding parameter [2] as [BIGINT] - [1]
+[19:34:23] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[19:34:25] 
+    drop table if exists hero cascade
+[19:34:25] 
+    drop sequence hibernate_sequence
+[19:34:25] create sequence hibernate_sequence start 1 increment 1
+[19:34:25] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[19:52:55] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[19:52:57] 
+    drop table if exists hero cascade
+[19:52:57] 
+    drop sequence hibernate_sequence
+[19:52:57] create sequence hibernate_sequence start 1 increment 1
+[19:52:57] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[19:53:50] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[19:54:23] 
+    drop table if exists hero cascade
+[19:54:23] 
+    drop sequence hibernate_sequence
+[19:54:23] create sequence hibernate_sequence start 1 increment 1
+[19:54:23] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:02:20] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:02:21] 
+    drop table if exists hero cascade
+[20:02:21] 
+    drop sequence hibernate_sequence
+[20:02:21] create sequence hibernate_sequence start 1 increment 1
+[20:02:21] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:03:20] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:03:22] 
+    drop table if exists hero cascade
+[20:03:22] 
+    drop sequence hibernate_sequence
+[20:03:22] create sequence hibernate_sequence start 1 increment 1
+[20:03:22] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:05:43] 
+    select
+        nextval ('hibernate_sequence')
+[20:05:43] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[20:05:43] binding parameter [1] as [VARCHAR] - [Sandy]
+[20:05:43] binding parameter [2] as [BIGINT] - [1]
+[20:06:00] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:06:02] 
+    drop table if exists hero cascade
+[20:06:02] 
+    drop sequence hibernate_sequence
+[20:06:02] create sequence hibernate_sequence start 1 increment 1
+[20:06:02] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:06:02] 
+    select
+        nextval ('hibernate_sequence')
+[20:06:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[20:06:02] binding parameter [1] as [VARCHAR] - [Sandy]
+[20:06:02] binding parameter [2] as [BIGINT] - [1]
+[20:06:02] 
+    drop table if exists hero cascade
+[20:06:02] 
+    drop sequence hibernate_sequence
+[20:06:02] create sequence hibernate_sequence start 1 increment 1
+[20:06:02] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:06:02] 
+    select
+        nextval ('hibernate_sequence')
+[20:06:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[20:06:02] binding parameter [1] as [VARCHAR] - [Musa]
+[20:06:02] binding parameter [2] as [BIGINT] - [1]
+[20:17:56] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:18:55] 
+    drop table if exists hero cascade
+[20:18:55] 
+    drop sequence hibernate_sequence
+[20:18:55] create sequence hibernate_sequence start 1 increment 1
+[20:18:55] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:33:17] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:33:21] 
+    drop table if exists hero cascade
+[20:33:21] 
+    drop sequence hibernate_sequence
+[20:33:21] create sequence hibernate_sequence start 1 increment 1
+[20:33:21] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:21:12] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:21:17] 
+    drop table if exists hero cascade
+[21:21:17] 
+    drop sequence hibernate_sequence
+[21:21:17] create sequence hibernate_sequence start 1 increment 1
+[21:21:17] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:21:49] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:21:53] 
+    drop table if exists hero cascade
+[21:21:53] 
+    drop sequence hibernate_sequence
+[21:21:53] create sequence hibernate_sequence start 1 increment 1
+[21:21:53] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:55:14] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:55:17] 
+    drop table if exists hero cascade
+[21:55:17] 
+    drop sequence hibernate_sequence
+[21:55:17] create sequence hibernate_sequence start 1 increment 1
+[21:55:17] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:57:13] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:57:15] 
+    drop table if exists hero cascade
+[21:57:15] 
+    drop sequence hibernate_sequence
+[21:57:15] create sequence hibernate_sequence start 1 increment 1
+[21:57:15] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:57:15] 
+    select
+        nextval ('hibernate_sequence')
+[21:57:15] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:57:15] binding parameter [1] as [VARCHAR] - [Sandy]
+[21:57:15] binding parameter [2] as [BIGINT] - [1]
+[21:57:16] 
+    drop table if exists hero cascade
+[21:57:16] 
+    drop sequence hibernate_sequence
+[21:57:16] create sequence hibernate_sequence start 1 increment 1
+[21:57:16] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:57:16] 
+    select
+        nextval ('hibernate_sequence')
+[21:57:16] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:57:16] binding parameter [1] as [VARCHAR] - [Musa]
+[21:57:16] binding parameter [2] as [BIGINT] - [1]
+[21:57:59] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:58:01] 
+    drop table if exists hero cascade
+[21:58:01] 
+    drop sequence hibernate_sequence
+[21:58:01] create sequence hibernate_sequence start 1 increment 1
+[21:58:01] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:58:02] 
+    select
+        nextval ('hibernate_sequence')
+[21:58:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:58:02] binding parameter [1] as [VARCHAR] - [Sandy]
+[21:58:02] binding parameter [2] as [BIGINT] - [1]
+[21:58:02] 
+    drop table if exists hero cascade
+[21:58:02] 
+    drop sequence hibernate_sequence
+[21:58:02] create sequence hibernate_sequence start 1 increment 1
+[21:58:02] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:58:02] 
+    select
+        nextval ('hibernate_sequence')
+[21:58:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:58:02] binding parameter [1] as [VARCHAR] - [Musa]
+[21:58:02] binding parameter [2] as [BIGINT] - [1]
+[21:58:03] 
+    drop table if exists hero cascade
+[21:58:03] 
+    drop sequence hibernate_sequence
+[21:58:03] create sequence hibernate_sequence start 1 increment 1
+[21:58:03] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:58:03] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[21:58:03] binding parameter [1] as [VARCHAR] - [Aisha]
+[21:58:03] binding parameter [2] as [BIGINT] - [1]
+[21:58:03] HHH000346: Error during managed flush [Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1]
+[21:59:42] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[21:59:45] 
+    drop table if exists hero cascade
+[21:59:45] 
+    drop sequence hibernate_sequence
+[21:59:45] create sequence hibernate_sequence start 1 increment 1
+[21:59:45] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:59:45] 
+    select
+        nextval ('hibernate_sequence')
+[21:59:45] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:59:45] binding parameter [1] as [VARCHAR] - [Sandy]
+[21:59:45] binding parameter [2] as [BIGINT] - [1]
+[21:59:45] 
+    drop table if exists hero cascade
+[21:59:45] 
+    drop sequence hibernate_sequence
+[21:59:45] create sequence hibernate_sequence start 1 increment 1
+[21:59:45] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[21:59:45] 
+    select
+        nextval ('hibernate_sequence')
+[21:59:45] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[21:59:45] binding parameter [1] as [VARCHAR] - [Musa]
+[21:59:45] binding parameter [2] as [BIGINT] - [1]
+[22:00:52] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[22:00:55] 
+    drop table if exists hero cascade
+[22:00:55] 
+    drop sequence hibernate_sequence
+[22:00:55] create sequence hibernate_sequence start 1 increment 1
+[22:00:55] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[22:00:55] 
+    select
+        nextval ('hibernate_sequence')
+[22:00:55] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[22:00:55] binding parameter [1] as [VARCHAR] - [Sandy]
+[22:00:55] binding parameter [2] as [BIGINT] - [1]
+[22:00:55] 
+    drop table if exists hero cascade
+[22:00:55] 
+    drop sequence hibernate_sequence
+[22:00:55] create sequence hibernate_sequence start 1 increment 1
+[22:00:55] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[22:00:55] 
+    select
+        nextval ('hibernate_sequence')
+[22:00:55] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[22:00:55] binding parameter [1] as [VARCHAR] - [Musa]
+[22:00:55] binding parameter [2] as [BIGINT] - [1]
+[22:07:13] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[22:07:16] 
+    select
+        nextval ('hibernate_sequence')
+[22:07:16] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[22:07:16] binding parameter [1] as [VARCHAR] - [Sandy]
+[22:07:16] binding parameter [2] as [BIGINT] - [2]
+[22:07:17] 
+    select
+        nextval ('hibernate_sequence')
+[22:07:17] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[22:07:17] binding parameter [1] as [VARCHAR] - [Musa]
+[22:07:17] binding parameter [2] as [BIGINT] - [3]
+[22:08:07] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[22:08:10] 
+    select
+        nextval ('hibernate_sequence')
+[22:08:10] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[22:08:10] binding parameter [1] as [VARCHAR] - [Sandy]
+[22:08:10] binding parameter [2] as [BIGINT] - [4]
+[22:08:10] 
+    select
+        nextval ('hibernate_sequence')
+[22:08:10] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[22:08:10] binding parameter [1] as [VARCHAR] - [Musa]
+[22:08:10] binding parameter [2] as [BIGINT] - [5]
+[00:18:09] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:18:12] 
+    select
+        nextval ('hibernate_sequence')
+[00:18:12] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:18:12] binding parameter [1] as [VARCHAR] - [Sandy]
+[00:18:12] binding parameter [2] as [BIGINT] - [6]
+[00:18:13] 
+    select
+        nextval ('hibernate_sequence')
+[00:18:13] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:18:13] binding parameter [1] as [VARCHAR] - [Musa]
+[00:18:13] binding parameter [2] as [BIGINT] - [7]
+[00:19:49] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:19:51] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:19:51] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:19:51] binding parameter [2] as [BIGINT] - [6]
+[00:21:33] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:21:36] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:21:36] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:21:36] binding parameter [2] as [BIGINT] - [6]
+[00:22:56] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:22:59] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:22:59] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:22:59] binding parameter [2] as [BIGINT] - [6]
+[00:23:00] 
+    /* delete com.model.Hero */ delete 
+        from
+            hero 
+        where
+            id=?
+[00:23:00] binding parameter [1] as [BIGINT] - [6]
+[00:39:44] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:43:23] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:43:26] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:43:26] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:43:26] binding parameter [2] as [BIGINT] - [6]
+[00:43:26] HHH000346: Error during managed flush [Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1]
+[00:44:21] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:44:24] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:44:24] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:44:24] binding parameter [2] as [BIGINT] - [6]
+[00:44:24] HHH000346: Error during managed flush [Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1]
+[00:44:51] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:44:54] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:44:54] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:44:54] binding parameter [2] as [BIGINT] - [7]
+[00:44:55] 
+    /* delete com.model.Hero */ delete 
+        from
+            hero 
+        where
+            id=?
+[00:44:55] binding parameter [1] as [BIGINT] - [7]
+[00:46:01] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:46:05] 
+    select
+        nextval ('hibernate_sequence')
+[00:46:05] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:46:05] binding parameter [1] as [VARCHAR] - [Sandy]
+[00:46:05] binding parameter [2] as [BIGINT] - [8]
+[00:46:05] 
+    select
+        nextval ('hibernate_sequence')
+[00:46:05] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:46:05] binding parameter [1] as [VARCHAR] - [Musa]
+[00:46:05] binding parameter [2] as [BIGINT] - [9]
+[00:46:24] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:46:27] 
+    select
+        nextval ('hibernate_sequence')
+[00:46:27] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:46:27] binding parameter [1] as [VARCHAR] - [Sandy]
+[00:46:27] binding parameter [2] as [BIGINT] - [10]
+[00:46:27] 
+    select
+        nextval ('hibernate_sequence')
+[00:46:27] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[00:46:27] binding parameter [1] as [VARCHAR] - [Musa]
+[00:46:27] binding parameter [2] as [BIGINT] - [11]
+[00:49:44] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[00:49:47] 
+    /* update
+        com.model.Hero */ update
+            hero 
+        set
+            name=? 
+        where
+            id=?
+[00:49:47] binding parameter [1] as [VARCHAR] - [Aisha]
+[00:49:47] binding parameter [2] as [BIGINT] - [8]
+[00:49:47] 
+    /* delete com.model.Hero */ delete 
+        from
+            hero 
+        where
+            id=?
+[00:49:47] binding parameter [1] as [BIGINT] - [8]
+[01:12:43] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[01:14:02] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:16:35] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:16:38] line 1:8: unexpected token: *
+[09:16:38] line 1:8: unexpected token: *
+line 1:8: unexpected token: *
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1245)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1022)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:730)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:323)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:186)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:279)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:187)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:142)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:76)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:150)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:302)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:240)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1907)
+	at DAO.HeroDao.listAll(HeroDao.java:28)
+	at com.hibernatetutorial.App.main(App.java:29)
+[09:32:49] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:39:36] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:39:39] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero
+[09:41:16] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:41:18] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero
+[09:42:06] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:42:08] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero
+[09:42:30] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:42:33] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero
+[09:44:24] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:44:27] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero
+[09:44:27] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:27] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:27] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:27] binding parameter [2] as [BIGINT] - [12]
+[09:44:28] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:28] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:28] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:28] binding parameter [2] as [BIGINT] - [13]
+[09:44:28] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:28] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:28] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:28] binding parameter [2] as [BIGINT] - [14]
+[09:44:28] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:28] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:28] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:28] binding parameter [2] as [BIGINT] - [15]
+[09:44:29] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:29] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:29] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:29] binding parameter [2] as [BIGINT] - [16]
+[09:44:29] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:29] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:29] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:29] binding parameter [2] as [BIGINT] - [17]
+[09:44:29] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:29] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:29] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:29] binding parameter [2] as [BIGINT] - [18]
+[09:44:30] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:30] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:30] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:30] binding parameter [2] as [BIGINT] - [19]
+[09:44:30] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:30] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:30] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:30] binding parameter [2] as [BIGINT] - [20]
+[09:44:30] 
+    select
+        nextval ('hibernate_sequence')
+[09:44:30] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:44:30] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:44:30] binding parameter [2] as [BIGINT] - [21]
+[09:52:02] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[09:52:20] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero
+[09:53:58] 
+    select
+        nextval ('hibernate_sequence')
+[09:53:58] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:53:58] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:53:58] binding parameter [2] as [BIGINT] - [22]
+[09:53:58] 
+    select
+        nextval ('hibernate_sequence')
+[09:53:58] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:53:58] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:53:58] binding parameter [2] as [BIGINT] - [23]
+[09:53:59] 
+    select
+        nextval ('hibernate_sequence')
+[09:53:59] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:53:59] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:53:59] binding parameter [2] as [BIGINT] - [24]
+[09:54:00] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:00] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:00] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:00] binding parameter [2] as [BIGINT] - [25]
+[09:54:00] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:00] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:00] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:00] binding parameter [2] as [BIGINT] - [26]
+[09:54:01] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:01] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:01] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:01] binding parameter [2] as [BIGINT] - [27]
+[09:54:01] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:01] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:01] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:01] binding parameter [2] as [BIGINT] - [28]
+[09:54:01] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:01] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:01] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:01] binding parameter [2] as [BIGINT] - [29]
+[09:54:02] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:02] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:02] binding parameter [2] as [BIGINT] - [30]
+[09:54:02] 
+    select
+        nextval ('hibernate_sequence')
+[09:54:02] 
+    /* insert com.model.Hero
+        */ insert 
+        into
+            hero
+            (name, id) 
+        values
+            (?, ?)
+[09:54:02] binding parameter [1] as [VARCHAR] - [HeroLoop]
+[09:54:02] binding parameter [2] as [BIGINT] - [31]
+[14:23:22] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:23:25] 
+    /* dynamic native SQL query */ SELECT
+        * 
+    FROM
+        hero 
+    Where
+        id = ?
+[14:23:25] binding parameter [1] as [BIGINT] - [10]
+[11:00:49] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:19:41] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:38:16] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:40:30] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:42:51] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:42:53] cannot create sessionFactory
+java.lang.IllegalArgumentException: Unrecognized legacy `hibernate.hbm2ddl.auto` value : true
+	at org.hibernate.tool.schema.Action.interpretHbm2ddlSetting(Action.java:181)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.interpret(SchemaManagementToolCoordinator.java:475)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:49)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:458)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465)
+	at org.hibernate.boot.internal.MetadataImpl.buildSessionFactory(MetadataImpl.java:170)
+	at com.connection.ConnectionBd.instanceSessionFactory(ConnectionBd.java:51)
+	at com.connection.ConnectionBd.getSessionFactory(ConnectionBd.java:64)
+	at com.dao.GenericDao.initialize(GenericDao.java:35)
+	at com.dao.CrudDao.insert(CrudDao.java:13)
+	at com.hibernatetutorial.App.main(App.java:38)
+[11:44:21] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:44:23] 
+    drop table if exists hero cascade
+[11:44:23] 
+    drop sequence hibernate_sequence
+[11:44:23] create sequence hibernate_sequence start 1 increment 1
+[11:44:23] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:09:13] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:09:15] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:09:15] 
+    drop table if exists category cascade
+[14:09:15] 
+    drop table if exists course cascade
+[14:09:15] 
+    drop table if exists hero cascade
+[14:09:15] 
+    drop sequence hibernate_sequence
+[14:09:15] create sequence hibernate_sequence start 1 increment 1
+[14:09:15] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:09:15] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:09:15] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:09:15] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:09:15] 
+    select
+        nextval ('hibernate_sequence')
+[14:09:15] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:09:15] binding parameter [1] as [VARCHAR] - [Development]
+[14:09:15] binding parameter [2] as [BIGINT] - [1]
+[14:20:17] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:20:18] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:20:18] 
+    drop table if exists category cascade
+[14:20:18] 
+    drop table if exists course cascade
+[14:20:18] 
+    drop table if exists hero cascade
+[14:20:18] 
+    drop sequence hibernate_sequence
+[14:20:18] create sequence hibernate_sequence start 1 increment 1
+[14:20:18] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:20:18] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:20:18] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:20:18] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:20:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:20:18] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:20:18] binding parameter [1] as [VARCHAR] - [Development]
+[14:20:18] binding parameter [2] as [BIGINT] - [1]
+[14:20:19] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:24:02] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:24:03] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:24:03] 
+    drop table if exists category cascade
+[14:24:03] 
+    drop table if exists course cascade
+[14:24:03] 
+    drop table if exists hero cascade
+[14:24:03] 
+    drop sequence hibernate_sequence
+[14:24:03] create sequence hibernate_sequence start 1 increment 1
+[14:24:03] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:24:03] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:24:03] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:24:03] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:24:03] 
+    select
+        nextval ('hibernate_sequence')
+[14:24:03] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:24:03] binding parameter [1] as [VARCHAR] - [Development]
+[14:24:03] binding parameter [2] as [BIGINT] - [1]
+[14:24:04] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:25:26] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:25:28] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:25:28] 
+    drop table if exists category cascade
+[14:25:28] 
+    drop table if exists course cascade
+[14:25:28] 
+    drop table if exists hero cascade
+[14:25:28] 
+    drop sequence hibernate_sequence
+[14:25:28] create sequence hibernate_sequence start 1 increment 1
+[14:25:28] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:25:28] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:25:28] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:25:28] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:25:28] 
+    select
+        nextval ('hibernate_sequence')
+[14:25:28] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:25:28] binding parameter [1] as [VARCHAR] - [Development]
+[14:25:28] binding parameter [2] as [BIGINT] - [1]
+[14:25:28] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:26:12] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:26:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:26:13] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:26:13] binding parameter [1] as [VARCHAR] - [Development]
+[14:26:13] binding parameter [2] as [BIGINT] - [2]
+[14:26:13] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:26:26] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:26:28] 
+    select
+        nextval ('hibernate_sequence')
+[14:26:28] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:26:28] binding parameter [1] as [VARCHAR] - [Development]
+[14:26:28] binding parameter [2] as [BIGINT] - [3]
+[14:26:28] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:31:08] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:31:10] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:10] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:31:10] binding parameter [1] as [VARCHAR] - [Development]
+[14:31:10] binding parameter [2] as [BIGINT] - [4]
+[14:31:10] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:31:10] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:10] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[14:31:10] binding parameter [1] as [BIGINT] - [4]
+[14:31:10] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[14:31:10] binding parameter [3] as [BIGINT] - [5]
+[14:35:04] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:35:47] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:36:55] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:39:07] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:40:41] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:41:09] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:43:16] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:43:17] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:43:17] 
+    drop table if exists category cascade
+[14:43:17] 
+    drop table if exists course cascade
+[14:43:17] 
+    drop table if exists hero cascade
+[14:43:17] 
+    drop sequence hibernate_sequence
+[14:43:17] create sequence hibernate_sequence start 1 increment 1
+[14:43:17] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:43:17] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:43:17] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:43:17] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:43:17] 
+    select
+        nextval ('hibernate_sequence')
+[14:43:17] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:43:17] binding parameter [1] as [VARCHAR] - [Development]
+[14:43:17] binding parameter [2] as [BIGINT] - [1]
+[14:43:17] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:43:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:43:18] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[14:43:18] binding parameter [1] as [BIGINT] - [1]
+[14:43:18] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[14:43:18] binding parameter [3] as [BIGINT] - [2]
+[14:56:04] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:56:06] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:56:47] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:56:48] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:56:48] 
+    drop table if exists category cascade
+[14:56:48] 
+    drop table if exists course cascade
+[14:56:48] 
+    drop table if exists hero cascade
+[14:56:48] 
+    drop sequence hibernate_sequence
+[14:56:48] create sequence hibernate_sequence start 1 increment 1
+[14:56:48] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:56:48] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:56:48] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:56:48] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:56:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:56:49] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:56:49] binding parameter [1] as [VARCHAR] - [Development]
+[14:56:49] binding parameter [2] as [BIGINT] - [1]
+[14:56:49] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:56:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:56:49] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[14:56:49] binding parameter [1] as [BIGINT] - [1]
+[14:56:49] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[14:56:49] binding parameter [3] as [BIGINT] - [2]
+[14:58:20] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:58:21] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:58:42] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:58:44] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[14:58:44] 
+    drop table if exists category cascade
+[14:58:44] 
+    drop table if exists course cascade
+[14:58:44] 
+    drop table if exists hero cascade
+[14:58:44] 
+    drop sequence hibernate_sequence
+[14:58:44] create sequence hibernate_sequence start 1 increment 1
+[14:58:44] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:58:44] 
+    create table course (
+        id int8 not null,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[14:58:44] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:58:44] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[14:58:44] 
+    select
+        nextval ('hibernate_sequence')
+[14:58:44] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[14:58:44] binding parameter [1] as [VARCHAR] - [Development]
+[14:58:44] binding parameter [2] as [BIGINT] - [1]
+[14:58:44] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[14:58:44] 
+    select
+        nextval ('hibernate_sequence')
+[14:58:44] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[14:58:44] binding parameter [1] as [BIGINT] - [1]
+[14:58:44] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[14:58:44] binding parameter [3] as [BIGINT] - [2]
+[14:58:44] 
+    select
+        nextval ('hibernate_sequence')
+[14:58:44] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[14:58:44] binding parameter [1] as [BIGINT] - [1]
+[14:58:44] binding parameter [2] as [VARCHAR] - [Curso de Angular]
+[14:58:44] binding parameter [3] as [BIGINT] - [3]
+[15:02:17] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[15:02:19] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[15:04:21] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[15:04:22] 
+    select
+        nextval ('hibernate_sequence')
+[15:04:22] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[15:04:22] binding parameter [1] as [VARCHAR] - [Development]
+[15:04:22] binding parameter [2] as [BIGINT] - [4]
+[15:04:23] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[15:04:23] 
+    select
+        nextval ('hibernate_sequence')
+[15:04:23] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[15:04:23] binding parameter [1] as [BIGINT] - [4]
+[15:04:23] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[15:04:23] binding parameter [3] as [BIGINT] - [5]
+[15:04:23] 
+    select
+        nextval ('hibernate_sequence')
+[15:04:23] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[15:04:23] binding parameter [1] as [BIGINT] - [4]
+[15:04:23] binding parameter [2] as [VARCHAR] - [Curso de Angular]
+[15:04:23] binding parameter [3] as [BIGINT] - [6]
+[15:04:23] 
+    select
+        course0_.id as id1_3_0_,
+        course0_.id_category as id_categ2_1_0_,
+        course0_.name as name1_1_0_,
+        category1_.id as id1_3_1_,
+        category1_.name as name1_0_1_ 
+    from
+        course course0_ 
+    left outer join
+        category category1_ 
+            on course0_.id_category=category1_.id 
+    where
+        course0_.id=?
+[15:04:23] binding parameter [1] as [BIGINT] - [2]
+[15:07:06] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[15:07:08] 
+    select
+        nextval ('hibernate_sequence')
+[15:07:08] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[15:07:08] binding parameter [1] as [VARCHAR] - [Development]
+[15:07:08] binding parameter [2] as [BIGINT] - [7]
+[15:07:09] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[15:07:09] 
+    select
+        nextval ('hibernate_sequence')
+[15:07:09] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[15:07:09] binding parameter [1] as [BIGINT] - [7]
+[15:07:09] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[15:07:09] binding parameter [3] as [BIGINT] - [8]
+[15:07:09] 
+    select
+        nextval ('hibernate_sequence')
+[15:07:09] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[15:07:09] binding parameter [1] as [BIGINT] - [7]
+[15:07:09] binding parameter [2] as [VARCHAR] - [Curso de Angular]
+[15:07:09] binding parameter [3] as [BIGINT] - [9]
+[15:07:09] 
+    select
+        course0_.id as id1_3_0_,
+        course0_.id_category as id_categ2_1_0_,
+        course0_.name as name1_1_0_,
+        category1_.id as id1_3_1_,
+        category1_.name as name1_0_1_ 
+    from
+        course course0_ 
+    left outer join
+        category category1_ 
+            on course0_.id_category=category1_.id 
+    where
+        course0_.id=?
+[15:07:09] binding parameter [1] as [BIGINT] - [2]
+[15:07:09] 
+    /* load com.model.Course */ select
+        course0_.id as id1_3_0_,
+        course0_.id_category as id_categ2_1_0_,
+        course0_.name as name1_1_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+[15:07:09] binding parameter [1] as [BIGINT] - [2]
+[15:07:09] 
+    /* load com.model.Category */ select
+        category0_.id as id1_3_0_,
+        category0_.name as name1_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+[15:07:09] binding parameter [1] as [BIGINT] - [1]
+[15:07:09] 
+    /* update
+        com.model.Course */ update
+            course 
+        set
+            id_category=?,
+            name=? 
+        where
+            id=?
+[15:07:09] binding parameter [1] as [BIGINT] - [1]
+[15:07:09] binding parameter [2] as [VARCHAR] - [Curso de Android]
+[15:07:09] binding parameter [3] as [BIGINT] - [2]
+[15:08:15] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[15:08:17] 
+    select
+        nextval ('hibernate_sequence')
+[15:08:17] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[15:08:17] binding parameter [1] as [VARCHAR] - [Development]
+[15:08:17] binding parameter [2] as [BIGINT] - [10]
+[15:08:17] 
+    /* 
+from
+    Category */ select
+        category0_.id as id1_3_,
+        category0_.name as name1_0_ 
+    from
+        category category0_
+[15:08:17] 
+    select
+        nextval ('hibernate_sequence')
+[15:08:17] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[15:08:17] binding parameter [1] as [BIGINT] - [10]
+[15:08:17] binding parameter [2] as [VARCHAR] - [Curso de Java para burros como eu]
+[15:08:17] binding parameter [3] as [BIGINT] - [11]
+[15:08:17] 
+    select
+        nextval ('hibernate_sequence')
+[15:08:17] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, name, id) 
+        values
+            (?, ?, ?)
+[15:08:17] binding parameter [1] as [BIGINT] - [10]
+[15:08:17] binding parameter [2] as [VARCHAR] - [Curso de Angular]
+[15:08:17] binding parameter [3] as [BIGINT] - [12]
+[15:08:17] 
+    select
+        course0_.id as id1_3_0_,
+        course0_.id_category as id_categ2_1_0_,
+        course0_.name as name1_1_0_,
+        category1_.id as id1_3_1_,
+        category1_.name as name1_0_1_ 
+    from
+        course course0_ 
+    left outer join
+        category category1_ 
+            on course0_.id_category=category1_.id 
+    where
+        course0_.id=?
+[15:08:17] binding parameter [1] as [BIGINT] - [2]
+[15:08:17] 
+    /* load com.model.Course */ select
+        course0_.id as id1_3_0_,
+        course0_.id_category as id_categ2_1_0_,
+        course0_.name as name1_1_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+[15:08:17] binding parameter [1] as [BIGINT] - [2]
+[15:08:17] 
+    /* load com.model.Category */ select
+        category0_.id as id1_3_0_,
+        category0_.name as name1_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+[15:08:17] binding parameter [1] as [BIGINT] - [1]
+[15:08:17] 
+    select
+        model0_.id as id1_3_0_,
+        model0_.id_category as id_categ2_1_0_,
+        model0_.name as name1_1_0_,
+        model0_.name as name1_0_0_,
+        model0_.name as name1_2_0_,
+        model0_.clazz_ as clazz_0_,
+        category1_.id as id1_3_1_,
+        category1_.name as name1_0_1_ 
+    from
+        ( select
+            id,
+            name,
+            id_category,
+            1 as clazz_ 
+        from
+            course 
+        union
+        all select
+            id,
+            name,
+            null::int8 as id_category,
+            2 as clazz_ 
+        from
+            category 
+        union
+        all select
+            id,
+            name,
+            null::int8 as id_category,
+            3 as clazz_ 
+        from
+            hero 
+    ) model0_ 
+left outer join
+    category category1_ 
+        on model0_.id_category=category1_.id 
+where
+    model0_.id=?
+[15:08:17] binding parameter [1] as [BIGINT] - [2]
+[15:08:17] 
+    /* delete com.model.Course */ delete 
+        from
+            course 
+        where
+            id=?
+[15:08:17] binding parameter [1] as [BIGINT] - [2]
+[20:27:42] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:27:44] create sequence hibernate_sequence start 1 increment 1
+[20:27:44] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:27:44] 
+    create table course (
+        id int8 not null,
+        money_back boolean,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[20:27:44] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:27:44] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[20:27:44] 
+    select
+        nextval ('hibernate_sequence')
+[20:27:44] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:27:44] binding parameter [1] as [VARCHAR] - [Development]
+[20:27:44] binding parameter [2] as [BIGINT] - [13]
+[20:27:44] 
+    select
+        nextval ('hibernate_sequence')
+[20:27:44] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:27:44] binding parameter [1] as [VARCHAR] - [null]
+[20:27:44] binding parameter [2] as [BIGINT] - [14]
+[20:31:29] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:31:32] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[20:31:32] 
+    drop table if exists category cascade
+[20:31:32] 
+    drop table if exists course cascade
+[20:31:32] 
+    drop table if exists hero cascade
+[20:31:32] 
+    drop sequence hibernate_sequence
+[20:31:32] create sequence hibernate_sequence start 1 increment 1
+[20:31:32] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:31:32] 
+    create table course (
+        id int8 not null,
+        money_back boolean,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[20:31:32] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:31:32] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[20:31:32] 
+    select
+        nextval ('hibernate_sequence')
+[20:31:32] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:31:32] binding parameter [1] as [VARCHAR] - [Development]
+[20:31:32] binding parameter [2] as [BIGINT] - [1]
+[20:31:32] 
+    select
+        nextval ('hibernate_sequence')
+[20:31:32] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:31:32] binding parameter [1] as [VARCHAR] - [Art]
+[20:31:32] binding parameter [2] as [BIGINT] - [2]
+[20:31:32] 
+    select
+        nextval ('hibernate_sequence')
+[20:31:32] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:31:32] binding parameter [1] as [VARCHAR] - [Matemathics]
+[20:31:32] binding parameter [2] as [BIGINT] - [3]
+[20:31:32] 
+    select
+        nextval ('hibernate_sequence')
+[20:31:32] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, money_back, name, id) 
+        values
+            (?, ?, ?, ?)
+[20:31:32] binding parameter [1] as [BIGINT] - [1]
+[20:31:32] binding parameter [2] as [BOOLEAN] - [false]
+[20:31:32] binding parameter [3] as [VARCHAR] - [Curso de Java para burros como eu]
+[20:31:32] binding parameter [4] as [BIGINT] - [4]
+[20:31:32] 
+    select
+        nextval ('hibernate_sequence')
+[20:31:32] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, money_back, name, id) 
+        values
+            (?, ?, ?, ?)
+[20:31:32] binding parameter [1] as [BIGINT] - [1]
+[20:31:32] binding parameter [2] as [BOOLEAN] - [false]
+[20:31:32] binding parameter [3] as [VARCHAR] - [Curso de Angular]
+[20:31:32] binding parameter [4] as [BIGINT] - [5]
+[20:34:10] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:34:12] 
+    alter table course 
+        drop constraint FK9ebxalkehlxcbare941pu4k5u
+[20:34:12] 
+    drop table if exists category cascade
+[20:34:12] 
+    drop table if exists course cascade
+[20:34:12] 
+    drop table if exists hero cascade
+[20:34:12] 
+    drop sequence hibernate_sequence
+[20:34:12] create sequence hibernate_sequence start 1 increment 1
+[20:34:12] 
+    create table category (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:34:12] 
+    create table course (
+        id int8 not null,
+        money_back boolean,
+        name varchar(255),
+        id_category int8,
+        primary key (id)
+    )
+[20:34:12] 
+    create table hero (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[20:34:12] 
+    alter table course 
+        add constraint FK9ebxalkehlxcbare941pu4k5u 
+        foreign key (id_category) 
+        references category
+[20:34:12] 
+    select
+        nextval ('hibernate_sequence')
+[20:34:12] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:34:12] binding parameter [1] as [VARCHAR] - [Development]
+[20:34:12] binding parameter [2] as [BIGINT] - [1]
+[20:34:12] 
+    select
+        nextval ('hibernate_sequence')
+[20:34:12] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:34:12] binding parameter [1] as [VARCHAR] - [Art]
+[20:34:12] binding parameter [2] as [BIGINT] - [2]
+[20:34:12] 
+    select
+        nextval ('hibernate_sequence')
+[20:34:12] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:34:12] binding parameter [1] as [VARCHAR] - [Matemathics]
+[20:34:12] binding parameter [2] as [BIGINT] - [3]
+[20:34:12] 
+    select
+        nextval ('hibernate_sequence')
+[20:34:12] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, money_back, name, id) 
+        values
+            (?, ?, ?, ?)
+[20:34:12] binding parameter [1] as [BIGINT] - [1]
+[20:34:12] binding parameter [2] as [BOOLEAN] - [true]
+[20:34:12] binding parameter [3] as [VARCHAR] - [Curso de Java para burros como eu]
+[20:34:12] binding parameter [4] as [BIGINT] - [4]
+[20:34:12] 
+    select
+        nextval ('hibernate_sequence')
+[20:34:12] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, money_back, name, id) 
+        values
+            (?, ?, ?, ?)
+[20:34:12] binding parameter [1] as [BIGINT] - [1]
+[20:34:12] binding parameter [2] as [BOOLEAN] - [false]
+[20:34:12] binding parameter [3] as [VARCHAR] - [Curso de Angular]
+[20:34:12] binding parameter [4] as [BIGINT] - [5]
+[20:37:13] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[20:37:15] 
+    select
+        nextval ('hibernate_sequence')
+[20:37:15] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:37:15] binding parameter [1] as [VARCHAR] - [Development]
+[20:37:15] binding parameter [2] as [BIGINT] - [6]
+[20:37:15] 
+    select
+        nextval ('hibernate_sequence')
+[20:37:15] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:37:15] binding parameter [1] as [VARCHAR] - [Art]
+[20:37:15] binding parameter [2] as [BIGINT] - [7]
+[20:37:15] 
+    select
+        nextval ('hibernate_sequence')
+[20:37:15] 
+    /* insert com.model.Category
+        */ insert 
+        into
+            category
+            (name, id) 
+        values
+            (?, ?)
+[20:37:15] binding parameter [1] as [VARCHAR] - [Matemathics]
+[20:37:15] binding parameter [2] as [BIGINT] - [8]
+[20:37:15] 
+    select
+        nextval ('hibernate_sequence')
+[20:37:15] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, money_back, name, id) 
+        values
+            (?, ?, ?, ?)
+[20:37:15] binding parameter [1] as [BIGINT] - [6]
+[20:37:15] binding parameter [2] as [BOOLEAN] - [true]
+[20:37:15] binding parameter [3] as [VARCHAR] - [Curso de Java para burros como eu]
+[20:37:15] binding parameter [4] as [BIGINT] - [9]
+[20:37:15] 
+    select
+        nextval ('hibernate_sequence')
+[20:37:15] 
+    /* insert com.model.Course
+        */ insert 
+        into
+            course
+            (id_category, money_back, name, id) 
+        values
+            (?, ?, ?, ?)
+[20:37:15] binding parameter [1] as [BIGINT] - [6]
+[20:37:15] binding parameter [2] as [BOOLEAN] - [false]
+[20:37:15] binding parameter [3] as [VARCHAR] - [Curso de Angular]
+[20:37:15] binding parameter [4] as [BIGINT] - [10]
